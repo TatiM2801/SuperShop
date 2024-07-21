@@ -1,0 +1,44 @@
+﻿@model SuperShop.Models.Cliente
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Detalhes</title>
+</head>
+<body>
+    Teste
+    <fieldset>
+        <legend>Cliente</legend>
+        <div>
+            <label for="ClienteId">Id</label>
+        </div>
+        <div>
+            <input type="text" id="ClienteId" name="ClienteId" value="@Model.ClienteId" />
+        </div>
+        <div>
+            <label for="Nome">Nome</label>
+        </div>
+        <div>
+            <input type="text" id="Nome" name="Nome" value="@Model.Nome" />
+        </div>
+        <div>
+            <label for="Email">Email</label>
+        </div>
+        <div>
+            <input type="text" id="Email" name="Email" value="@Model.Email" />
+        </div>
+        <div>
+            <label for="Telefone">Telefone</label>
+        </div>
+        <div>
+            <input type="text" id="Telefone" name="Telefone" value="@Model.Telefone" />
+        </div>
+
+    </fieldset>
+</body>
+</html>

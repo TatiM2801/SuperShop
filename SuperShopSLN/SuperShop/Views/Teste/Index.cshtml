@@ -1,0 +1,48 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Index</title>
+    </head>
+    <body>
+        <div>
+            <h1>View Index.cshtml do controlador TesteController</h1>
+            <div>
+                @*<b>Nome:</b> @ViewData["Nome"] <br />
+                <b>Email:</b> @ViewData["Email"] <br />
+                <b>Curso:</b> @ViewData["Curso"] <br />
+                <b>Data Inicio:</b> @ViewData["Data Inicio"] <br /> *@
+
+                @*<b>Nome:</b> @ViewBag.Nome <br />
+                <b>Email:</b> @ViewBag.Email <br />
+                <b>Curso:</b> @ViewBag.Curso <br />
+                <b>Data Inicio:</b> @ViewBag.DataInicio <br /> *@
+
+                @*<div>
+                    <ul>
+                    @foreach(string strPais in ViewBag.Paises)
+                    {
+                        <li>@strPais</li>
+                    }
+                </ul>
+                </div> *@
+
+            <div>
+                <ul>
+                    @foreach (string strPais in (List<string>)ViewData["Paises"])
+                    {
+                        <li>@strPais</li>
+                    }
+                </ul>
+            </div>
+
+
+
+            </div>
+        </div>
+    </body>
+</html>
