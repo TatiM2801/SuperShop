@@ -7,18 +7,22 @@ namespace SuperShop.Controllers
     {
         public IActionResult Detalhe()
         {
-
             Cliente cliente = new Cliente()
             {
                 ClienteId = 200,
                 Nome = "Tatiana",
                 Email = "tatiana.moraes@gmail.com",
                 Telefone = "966966523",
-
-
             };
 
             return View(cliente);
+        }
+
+        [HttpPost]
+
+        public IActionResult GuardarCliente(Cliente modelo)
+        {
+            return View(modelo);
         }
     }
 }

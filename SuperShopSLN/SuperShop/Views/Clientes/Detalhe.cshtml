@@ -11,7 +11,7 @@
     <title>Detalhes</title>
 </head>
 <body>
-    Teste
+    <form action="/Clientes/GuardarCliente" method="POST">
     <fieldset>
         <legend>Cliente</legend>
         <div>
@@ -38,7 +38,11 @@
         <div>
             <input type="text" id="Telefone" name="Telefone" value="@Model.Telefone" />
         </div>
+        <p>
+            <input type="submit" value="Enviar" />
+        </p>
 
     </fieldset>
+</form>
 </body>
 </html>
