@@ -10,7 +10,7 @@ using SuperShop.Data;
 namespace SuperShop.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240722212421_InitDb")]
+    [Migration("20240724201533_InitDb")]
     partial class InitDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -31,7 +31,10 @@ namespace SuperShop.Migrations
                     b.Property<string>("ImageUrl")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("IsAvailable")
+                    b.Property<bool>("IsAvailable")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("LastPurchase")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("LastSale")

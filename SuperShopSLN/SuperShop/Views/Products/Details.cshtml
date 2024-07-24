@@ -1,13 +1,10 @@
 ﻿@model SuperShop.Data.Entities.Product
 
-<!DOCTYPE html>
+@{
+    ViewData["Title"] = "Details";
+}
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Details</title>
-</head>
-<body>
+<h1>Product Details</h1>
 
 <div>
     <h4>Product</h4>
@@ -52,8 +49,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" class="btn btn-warning" asp-route-id="@Model.Id">Edit</a>
+    <a asp-action="Index" class="btn btn-success">Back to List</a>
 </div>
-</body>
-</html>

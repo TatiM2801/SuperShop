@@ -7,6 +7,8 @@ namespace SuperShop.Data.Entities
     {
         public int Id { get; set; }
 
+        [Required]
+        [MaxLength(50, ErrorMessage = " The field {0} can contain {1} characters length")]
         public string Name { get; set; }
 
         [DisplayFormat(DataFormatString = "{0:C2}", ApplyFormatInEditMode = false)]
@@ -15,11 +17,14 @@ namespace SuperShop.Data.Entities
         [Display(Name = "Image")]
         public string ImageUrl { get; set; }
 
+        [Display(Name = "Last Purchase")]
+        public DateTime? LastPurchase { get; set; }
+
         [Display(Name = "Last Sale")]
-        public DateTime LastSale { get; set; }
+        public DateTime? LastSale { get; set; }
 
         [Display(Name = "Is Available")]
-        public DateTime IsAvailable { get; set; }
+        public bool IsAvailable { get; set; }
 
         [DisplayFormat(DataFormatString = "{0:N2}", ApplyFormatInEditMode = false)]
         public double Stock { get; set; }

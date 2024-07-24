@@ -8,12 +8,14 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Detalhes</title>
+    <title>Detalhe</title>
 </head>
 <body>
     <form action="/Clientes/GuardarCliente" method="POST">
     <fieldset>
         <legend>Cliente</legend>
+        <b>@ViewBag.Nome</b>
+        <b>@ViewData["Email"]</b>
         <div>
             <label for="ClienteId">Id</label>
         </div>

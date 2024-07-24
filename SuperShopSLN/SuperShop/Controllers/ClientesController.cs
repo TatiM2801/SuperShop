@@ -15,6 +15,9 @@ namespace SuperShop.Controllers
                 Telefone = "966966523",
             };
 
+            ViewBag.Nome = cliente.Nome;
+            ViewData["Email"] = cliente.Email;
+
             return View(cliente);
         }
 
