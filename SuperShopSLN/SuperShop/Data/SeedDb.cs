@@ -11,8 +11,7 @@ namespace SuperShop.Data
     {
         private readonly DataContext _context;
         private readonly IUserHelper _userHelper;
-
-        private Random _random;
+        private readonly Random _random;
 
         public SeedDb(DataContext context, IUserHelper userHelper)
         {
@@ -25,15 +24,15 @@ namespace SuperShop.Data
         {
             await _context.Database.EnsureCreatedAsync();
 
-            var user = await _userHelper.GetUserByEmailAsync("tatianamoraes.ti@gmail.com");
+            var user = await _userHelper.GetUserByEmailAsync("tatimoraes.ti@gmail.com");
             if (user == null)
             {
                 user = new User
                 {
                     FirstName = "Tatiana",
                     LastName = "Moraes",
-                    Email = "tatianamoraes.ti@gmail.com",
-                    UserName = "tatianamoraes.ti@gmail.com",
+                    Email = "tatimoraes.ti@gmail.com",
+                    UserName = "tatimoraes.ti@gmail.com",
                     PhoneNumber = "966533121"
                 };
 
@@ -42,7 +41,6 @@ namespace SuperShop.Data
                 {
                     throw new InvalidOperationException("Could not create the user in seeder");
                 }
-
             }
 
             if (!_context.Products.Any())
