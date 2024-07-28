@@ -65,6 +65,7 @@ namespace SuperShop
             }
 
             app.UseHttpsRedirection();
+
             app.UseStaticFiles();
 
             app.UseRouting();
