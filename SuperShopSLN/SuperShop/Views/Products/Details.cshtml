@@ -51,13 +51,10 @@
             </dl>
         </div>
 
-        <!-- Imagem do Produto -->
-        <div class="col-md-4">
-            @if (!string.IsNullOrEmpty(Model.ImageUrl))
-            {
-                <img src="@Url.Content(Model.ImageUrl)" alt="Product Image" style="width:300px;height:450px;max-width:100%;height:auto">
-            }
-        </div>
+    <div class="col-md-4">
+        <!-- Exibe a imagem, mesmo se a URL estiver vazia -->
+            <img src="@Url.Content(Model.ImageFullPath)" alt="Image" style="widht:300px;height:450px;max-width:100%;height:auto" />
+    </div>
     </div>
 
     <!-- Botões de Navegação -->
