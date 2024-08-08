@@ -30,7 +30,6 @@ namespace SuperShop
                 cfg.Password.RequireUppercase = false;
                 cfg.Password.RequireLowercase = false;
                 cfg.Password.RequireNonAlphanumeric = false;
-                cfg.Password.RequireDigit = false;
                 cfg.Password.RequiredLength = 6;
             })
                 .AddEntityFrameworkStores<DataContext>();
